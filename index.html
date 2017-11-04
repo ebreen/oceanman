@@ -4,22 +4,67 @@
 <meta charset="utf-8">
 <title>index</title>
 </head>
+
+
 <style>
+	body { margin:0px; background:#000; }
+	.header {
+		height: 50px;
+		background: #F0F0F0;
+		border: 1px solid #CCC;
+		width: 960px;
+		margin:0px auto;
+	}
+	.content {
+		width: 960px;
+		background:#F0F0F0;
+		border: 1px solid #CCC;
+		height:auto;
+		margin:20px auto;
+	}
+	.headertext {
+		text-align: center;
+		margin-top: 5px;
+		font-family: "Georgia", "Verdana", serif;
+	}
+	.gifs {
+		float: left;
+	}
 </style>
 
 
-	
 <body>
-<video preload= "true" autoplay = "autoplay" loop = "loop" muted width = "100%" height = "100%">
-    <source src = "Greatest Surfing Wipeouts of 2016.mp4" type = "video/mp4">
-</video>
 
-<audio autoplay = "autoplay" loop = "loop">
+<div class="header">
+	<h1 class="headertext"> Welcome to Oceanman, the gem of the interwebs. </h1>
+</div>
 
-<source src="Ween-Ocean Man Lyric video.mp3" type = "audio/mp3">
+
+<div class="content">
+	<img class="gifs" src="gifs/bay.gif" width="960px" height="450px"</img>
+	<img class="gifs" src="gifs/chocolate surfer.gif" width="480px" height="450px" </img>
+	<img class="gifs" src="gifs/broccoli.gif" width="480px" height="450px" </img>
+	<img class="gifs" src="gifs/pikachu.gif" width="480px" height="450px" </img>
+	<img class="gifs" src="gifs/surfer.gif" width="480px" height="450px" </img>
+</div>
+
+
+
+
+<audio id= "audio1" autoplay = "autoplay" loop = "loop" onLoadedData="setHalfVolume()">
+
+<source src="bettertogether.mp3" type = "audio/mp3">
 	</audio>
 
-
+<script>
+	function setHalfVolume() {
+    var myAudio = document.getElementById("audio1");  
+    myAudio.volume = 0.1 //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
+}
+	
+	
+	
+	</script>
 
 
 </body>
